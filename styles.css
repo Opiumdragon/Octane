@@ -1,0 +1,323 @@
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .Home h1 { font-size: 8rem; }
+  .mission h2, .services h2, .team h2 { font-size: 3.5rem; }
+  .service-container { gap: 60px; }
+}
+
+/* Laptops / Tablets Landscape (max-width: 1024px) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    position: relative;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+  .Home h1 { font-size: 6rem; }
+  .service-container { flex-wrap: wrap; gap: 30px; }
+}
+
+/* Tablets Portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  .Home h1 { font-size: 4rem; }
+  .Home p { font-size: 1.2rem; }
+  .mission h2, .services h2, .team h2 { font-size: 2.5rem; }
+  .service-container, .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  nav ul { flex-direction: column; text-align: center; }
+  nav li { margin: 8px 0; }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+  }
+  .logo img { width: 40px; }
+  .Home {
+    height: 90vh;
+    padding: 20px;
+  }
+  .Home h1 { font-size: 3rem; }
+  .Home p { font-size: 1rem; }
+  .btn { padding: 8px 16px; font-size: 0.9rem; }
+  .mission p, .services p, .contact p { font-size: 1rem; }
+  .team-member img { width: 150px; height: 150px; }
+  footer p { font-size: 0.8rem; }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+/* universal styles */
+html{
+    background-color: #eceedf;
+    font-family: 'playfair', serif;
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header {
+    background-color: #eceedf;
+    color: #000000;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #000000;
+    position: fixed;
+    top: 0;
+}
+/* Hamburger Base */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+/* navigation  */
+
+nav {
+    display: inline-flex;
+}
+nav li{
+    list-style: none;
+    margin: 10px 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    align-self: center;
+    display: inline-flex;
+}
+nav a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+}
+
+/* logo */
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin: 10px 0;
+}
+/* hero section */
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.Home h1{
+    font-size: 9rem;
+    margin: 0;
+    font-family: 'playfair', sans-serif;
+    font-weight: 700;
+}
+.Home p{
+    font-size: 1.5rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+.btn{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'nunito sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: purple;
+}
+/* mission section */
+.mission{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+.mission h2{
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'playfair', sans-serif;
+    font-weight: 700;
+}
+.mission p{
+    font-size: 1.5rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+/* services section */
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    border-top: 2px solid #000000;
+}
+.service-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+.services h2{
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'playfair', sans-serif;
+    font-weight: 700;
+    justify-self: center;
+    padding-bottom: 50px;
+}
+.services p{
+    font-size: 0.8rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+.services img{
+    width: 90px;
+    height: auto;
+    margin: 20px 0;
+}
+/* team section */
+.team{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 10px;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+.team-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.team h2{
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'playfair', sans-serif;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+    padding-bottom: 50px;
+}
+.team h3{
+    font-size: 1.5rem;
+    font-family: 'playfair', serif;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+.team p{
+    font-size: 1rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 300;
+    margin: 10px 0 0 0;
+}
+.team-member{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.team-member img{
+    border-radius: 20%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* contact section */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #000000;
+}
+.contact h2{
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'playfair', sans-serif;
+    font-weight: 700;
+}
+.contact p{
+    font-size: 1.5rem;
+    font-family: 'rubik', sans-serif;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+/* footer */
+footer{
+    background-color: #000000;
+    color: #eceedf;
+    text-align: center;
+    padding: 5px 0;
+    border-top: 0.5px solid #000000;
+    margin-top: 50px;
+    font-family: 'rubik', sans-serif;
+    font-weight: 300;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'playfair', serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
